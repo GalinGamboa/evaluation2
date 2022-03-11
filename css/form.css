@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    overflow:scroll;
+    margin: auto;
+    padding: 60px 0;
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(161,140,209,0.2) 0%,rgba(251, 194, 235,0.2) 100%), url(../images/wallpaper/colibri.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+	
+}
+
+.close{
+	width: 40px;
+	position: relative;
+	top: 15px;
+	left:  90%;
+	
+}
+
+.close:hover{
+	cursor: pointer;
+}
+
+main {
+    color: #fff;
+	max-width: 800px;
+	width: 90%;
+	margin: auto;
+	padding: 40px;
+}
+
+
+.form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.form_label {
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.form_group_input{
+	position: relative;
+}
+
+.form_input {
+	width: 100%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+}
+
+.form_input:focus {
+	border: 4px solid #aa1f989c ;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+.form_input_error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+
+}
+
+.form_input_error_active {
+	display: block;
+    color:rgb(250, 252, 253);
+    font-size: 13px;
+	font-weight: bold;
+}
+
+.form_validation_state {
+	position: absolute;
+	right: 10px;
+    bottom: 11px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+
+.form_checkbox {
+	margin-right: 10px;
+}
+
+
+.form_group_terms, 
+.form_message,
+.form_group_btn_envoyer {
+	grid-column: span 2;
+}
+
+.form_message {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.form_message_active {
+	display: block;
+}
+
+.form_message p {
+	margin: 0;
+}
+
+.form_group_btn_envoyer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.form_btn {
+	height: 45px;
+	line-height: 45px;
+	width: 30%;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1s ease all;
+}
+
+.form_btn:hover {
+	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+}
+
+.form_message_correct {
+	font-size: 20px;
+	color: #fff;
+	display: none;
+}
+
+.form_message_correct_active {
+	display: block;
+}
+
+/* ====================================== */
+/*             Validation                 */
+/* ====================================== */
+
+.form_group_success .form_validation_state {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.form_group_incorrect .form_label {
+	color: #bb2929;
+}
+
+.form_group_incorrect  .form_validation_state  {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.form_group_incorrect .form_input {
+	border: 3px solid #bb2929;
+}
+
+
+/* ====================================== */
+/*             Media-querys               */
+/* ====================================== */
+@media screen and (max-width: 800px) {
+
+    
+    .container{
+        padding: 0;
+    }
+
+
+	.form{
+		grid-template-columns: 1fr;
+	}
+
+	.form_group_terms, 
+	.form_message,
+	.form_group_btn_envoyer {
+		grid-column: 1;
+	}
+
+	.form_btn {
+		width: 80%;
+	}
+
+    .form_message_correct {
+        font-size: 14px;
+        
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .form_message {
+        line-height: 25px;
+        height: 50px;
+    }
+   
+    main {
+        padding: 0;
+        width: 95%;
+    }
+
+}

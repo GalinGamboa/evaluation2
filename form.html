@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+
+    <!--   icons  CDN  bootstrap  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+    <!--   icônes pour les réseaux sociaux  boxicons.com   -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--   icônes pour modifier les styles  -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/form.css">
+
+
+</head>
+
+<body class="container">
+    
+    <a href="index.html">
+        <img src="/images/icons/close.svg" alt="" class="close">
+    </a>
+
+
+    <!--==========================================-->
+    <!--                 main                     -->
+    <!--==========================================-->
+    
+    <main>
+        <form action="" class="form" id="form">
+
+            <!-- Group: User -->
+
+            <div class="form_group" id="group_user">
+                <label for="user" class="form_label">Identifiant</label>
+                <div class="form_group_input">
+                    <input type="text" class="form_input" name="user" id="user" placeholder="joseph35">
+                    <i class="form_validation_state bi bi-x-circle"></i>
+                </div>
+                <p class="form_input_error ">Le nom d'utilisateur doit comporter de 4 à 16 characters et ne peut contenir que des chiffres, des lettres et des traits de soulignement.</p>
+            </div>
+
+            
+            <!-- ==========  Group: Name  ========  -->
+
+            <div class="form_group" id="group_name">
+                <label for="name" class="form_label">Nom</label>
+                <div class="form_group_input">
+                    <input type="text" class="form_input" name="name" id="name" placeholder="Joseph Losc">
+                    <i class="form_validation_state bi bi-x-circle"></i>
+                </div>
+                <p class="form_input_error">Le nom d'utilisateur doit être composé de 2 à 20 characters et ne peut contenir que des lettres</p>
+            </div>
+
+            
+             <!-- ========== Group: Adresse Email =======  -->
+
+            <div class="form_group" id="group_email">
+                <label for="email" class="form_label">Adresse Email</label>
+                <div class="form_group_input">
+                    <input type="text" class="form_input" name="email" id="email" placeholder="josephxx@xxx.xxx">
+                    <i class="form_validation_state bi bi-x-circle"></i>
+                </div>
+                <p class="form_input_error">L'e-mail ne peut contenir que des lettres, des chiffres, des points, des traits d'union et des traits de soulignement..</p>
+            </div>
+
+            
+            <!-- ==========  Group: Telephone =======  -->
+
+            <div class="form_group" id="group_telephone">
+                <label for="telephone" class="form_label">Telephone</label>
+                <div class="form_group_input">
+                    <input type="text" class="form_input" name="telephone" id="telephone" placeholder="55555555555">
+                    <i class="form_validation_state bi bi-x-circle"></i>
+                </div>
+                <p class="form_input_error">le téléphone ne doit contenir que des chiffres. Minimum 9 et maximum 14</p>
+            </div>
+
+            
+            <!-- ==========  Group: Password =======  -->
+
+			<div class="form_group" id="group_password">
+				<label for="password" class="form_label">Mot de passe</label>
+				<div class="form_group_input">
+					<input type="password" class="form_input" name="password" id="password">
+					<i class="form_validation_state bi bi-x-circle"></i>
+				</div>
+				<p class="form_input_error">Le mot de passe doit être composé de 4 à 12 chiffres.</p>
+			</div>
+
+			
+             <!-- ==========  Group: password2 =======  -->
+
+			<div class="form_group" id="group_password2">
+				<label for="password2" class="form_label">Repetez Mot de passe</label>
+				<div class="form_group_input">
+					<input type="password" class="form_input" name="password2" id="password2">
+					<i class="form_validation_state bi bi-x-circle"></i>
+				</div>
+				<p class="form_input_error">Les deux mots de passe doivent être identiques.</p>
+			</div>
+
+
+            
+             <!-- ==========  Group: Terms et conditios =======  -->
+
+                <div class="form_group" id="group_terms">
+                    <label class="form_label">
+                        <input class="form_checkbox" type="checkbox" name="terms" id="terms">
+                        J'accepte les termes et conditions
+                    </label>
+                </div>
+
+                <div class="form_message" id="form_message">
+                    <p><i class="bi bi-exclamation-triangle-fill"></i> <b>Error :</b>Veuillez remplir le formulaire correctement.  </p>
+
+                </div>
+
+                <div class="form_group form_group_btn_envoyer">
+                    <button type="submit" class="form_btn">Enviar</button>
+                    <p class="form_message_correct" id="form_message_correct">Formulaire envoyé avec succès !</p>
+                </div>
+
+
+
+        </form>
+
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/form.js"></script>
+
+
+    </main>
+</body>
+</html>
